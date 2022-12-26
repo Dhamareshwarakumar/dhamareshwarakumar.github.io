@@ -78,6 +78,16 @@
     top: 25%;
 }
 
+@media screen and (max-width: 768px) {
+    .landing__img {
+        display: none;
+    }
+
+    .landing__text h1 {
+        font-size: 24px;
+    }
+}
+
 .landing__img img {
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     height: 380px;
@@ -85,3 +95,58 @@
 }
 
 /********************************* Skills Section *********************************/
+#skills {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.skills__heading {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.skills__container {
+    display: inline-block;
+    transform: rotate(45deg);
+    margin: 0px 0px;
+}
+
+@media screen and (max-width: 768px) {
+    .skills__container {
+        transform: rotate(45deg) scale(0.7);
+    }
+}
+
+.skills__row {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.skill {
+    width: 100px;
+    height: 100px;
+    background-color: #DEDEDE;
+    margin: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.skill img {
+    width: 55px;
+    height: auto;
+    transform: rotate(-45deg);
+}
+
+.skill.inactive {
+    background: transparent;
+}
+
+.skill.center {
+    background-color: #333;
+}
